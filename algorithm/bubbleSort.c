@@ -6,7 +6,7 @@ void xuat(int a[], int leg)
         printf("%d\t", a[i]);
     printf("\n");
 }
-void selectionSort(int a[], int leg)
+void bubbleSort(int a[], int leg)
 {
     for (int i = 0; i < leg-1; i++)
     {
@@ -25,6 +25,6 @@ void selectionSort(int a[], int leg)
 int main()
 {
     int a[] = {2, 1, 3, 1, 0, 9};
-    selectionSort(a, 6);
+    bubbleSort(a, 6);
     xuat(a, 6);
 }
