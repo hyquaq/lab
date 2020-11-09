@@ -1,0 +1,5 @@
+nguyen -> 6
+tran -> 4
+quang -> 5
+huy -> 3
+kkk -> 3
