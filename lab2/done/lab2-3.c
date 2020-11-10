@@ -4,7 +4,7 @@
 int main(void)
 {
     int n;
-    printf("enter n: ");
+    printf("enter number n: ");
     scanf("%d", &n);
     printf("table of any number\n");
     for (int i = 0; i <= 10; i++)
