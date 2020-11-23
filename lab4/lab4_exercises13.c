@@ -1,18 +1,41 @@
 // Write program to put even and odd elements of array into two new separate arrays.
 #include <stdio.h>
+#define SIZE 10
 
-int main()
+int slip(int a[], int odd[], int even[], int size, int *sizeO, int *sizeE)
 {
-    int i, n, sum;
-    printf("enter n : ");
-    scanf("%d", &n);
-    sum = 0;
-    for (i = 1; i <= n; i++)
+    *sizeO = -1;
+    *sizeE = -1;
+    for (int i = 0; i < size; i++)
     {
-        if (n % 2)
+        if (a[i] % 2)
         {
-            sum += i;
+            odd[++*sizeO] = a[i];
+            continue;
         }
+
+        even[++*sizeE] = a[i];
     }
-    printf("\t\t%d", sum);
+}
+
+void printArray(int a[], int size)
+{
+    for (int i = 0; i < size; i++)
+        printf("%d ", a[i]);
+
+    printf("\n");
+}
+int main(void)
+{
+    int a[] = {0, 1, 2, 3, 4, 5, 6, 7};
+    int size = sizeof(a) / sizeof(a[0]);
+    int odd[SIZE];
+    int sizeO;
+    int even[SIZE];
+    int sizeE;
+
+    slip(a, odd, even, size, &sizeO, &sizeE);
+    printArray(odd, ++sizeO);
+    printArray(even, ++sizeE);
+    return 0;
 }
