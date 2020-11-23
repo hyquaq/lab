@@ -1,11 +1,11 @@
 // Write program to merge two array to third array.
 #include <stdio.h>
-#define SIZE 100
+#define SIZE 1000
 
 void mergeArray(int[], int[], int[], int, int);
 void printArray(int[], int);
 
-int main()
+int main(void)
 {
     int a[] = {1, 2, 3};
     int b[] = {-1, -2, 0};
@@ -16,6 +16,7 @@ int main()
     int sizeC = sizea + sizeb;
     mergeArray(a, b, c, sizea, sizeb);
     printArray(c, sizeC);
+    return 0;
 }
 
 void mergeArray(int a[], int b[], int affter[], int sizea, int sizeb)

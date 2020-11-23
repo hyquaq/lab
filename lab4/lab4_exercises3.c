@@ -3,11 +3,12 @@
 
 int findMinimun(int[], int);
 
-int main()
+int main(void)
 {
     int a[] = {1, -10, 3};
 
     printf("minimun in array %d", findMinimun(a, sizeof(a) / sizeof(a[0])));
+    return 0;
 }
 
 int findMinimun(int a[], int size)

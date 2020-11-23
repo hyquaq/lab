@@ -4,11 +4,12 @@
 void reverseArray(int[], int);
 void printArray(int[], int);
 
-int main()
+int main(void)
 {
     int a[] = {1, 3, 4, 5};
     reverseArray(a, sizeof(a) / sizeof(a[0]));
     printArray(a, sizeof(a) / sizeof(a[0]));
+    return 0;
 }
 
 void reverseArray(int a[], int size)

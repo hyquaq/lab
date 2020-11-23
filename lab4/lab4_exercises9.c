@@ -1,11 +1,11 @@
 // Write program to count total number of duplicate elements in an array.
 #include <stdio.h>
-#define SIZE 100
+#define SIZE 1000
 
 void countNumberDuplicate(int[], int[], int[], int);
 void printArray(int[], int[]);
 
-int main()
+int main(void)
 {
     int a[] = {1, 2, 3, 2, 3, 10, -1, 12, -1, 0, 0, 0};
     int b[SIZE] = {0};
@@ -14,6 +14,7 @@ int main()
 
     countNumberDuplicate(a, b, c, size);
     printArray(b, c);
+    return 0;
 }
 
 void countNumberDuplicate(int a[], int b[], int c[], int size)

@@ -3,11 +3,12 @@
 
 int findMaximum(int[], int);
 
-int main()
+int main(void)
 {
     int a[] = {1, 10, 3};
 
     printf("maximun in array %d", findMaximum(a, sizeof(a) / sizeof(a[0])));
+    return 0;
 }
 
 int findMaximum(int a[], int size)

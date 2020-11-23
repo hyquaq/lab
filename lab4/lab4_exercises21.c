@@ -1,16 +1,7 @@
+// Write program to find determinant of a matrix.
 #include <stdio.h>
-int main()
+
+int main(void)
 {
-    int i, n, sum;
-    printf("enter n : ");
-    scanf("%d", &n);
-    sum = 0;
-    for (i = 1; i <= n; i++)
-    {
-        if (n % 2)
-        {
-            sum += i;
-        }
-    }
-    printf("\t\t%d", sum);
+    return 0;
 }

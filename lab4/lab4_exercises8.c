@@ -4,7 +4,7 @@
 void detele(int[], int, int);
 void printArray(int[], int);
 
-int main()
+int main(void)
 {
     int a[] = {1, 2, 3};
     int position = 1;
@@ -12,6 +12,7 @@ int main()
 
     detele(a, size, position);
     printArray(a, size - 1);
+    return 0;
 }
 
 void detele(int a[], int size, int position)

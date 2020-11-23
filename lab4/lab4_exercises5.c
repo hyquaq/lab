@@ -4,11 +4,12 @@
 
 float sumAll(int[], int);
 
-int main()
+int main(void)
 {
     int a[] = {1, 2, 3, -3, -2};
 
     printf("sum all non-positive numbers of array = %.2f", sumAll(a, sizeof(a) / sizeof(a[0])));
+    return 0;
 }
 
 float sumAll(int a[], int size)
