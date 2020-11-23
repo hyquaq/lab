@@ -1,16 +1,35 @@
+// Write program to put even and odd elements of array into two new separate arrays.
 #include <stdio.h>
-int main()
+#define SIZE 10
+
+int findNumberByKey(int a[], int size, int key)
 {
-    int i, n, sum;
-    printf("enter n : ");
-    scanf("%d", &n);
-    sum = 0;
-    for (i = 1; i <= n; i++)
+    for (int i = 0; i < size; i++)
     {
-        if (n % 2)
-        {
-            sum += i;
-        }
+        if (a[i] == key)
+            return i;
     }
-    printf("\t\t%d", sum);
+    return -1;
+}
+
+void printArray(int a[], int size)
+{
+    for (int i = 0; i < size; i++)
+        printf("%d ", a[i]);
+
+    printf("\n");
+}
+
+int main(void)
+{
+    int a[] = {0, 1, 2, 3, 4, 5, 6, 7};
+    int size = sizeof(a) / sizeof(a[0]);
+    printArray(a, size);
+
+    int key;
+    printf("enter number need find: ");
+    scanf("%d", &key);
+
+    printf("location %d in array -> %d", key, findNumberByKey(a, size, key));
+    return 0;
 }
