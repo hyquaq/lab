@@ -1,16 +1,49 @@
 #include <stdio.h>
-int main()
+#define SIZE 10
+
+void printfArrayMatrix(int a[][SIZE], int columns, int rows)
 {
-    int i, n, sum;
-    printf("enter n : ");
-    scanf("%d", &n);
-    sum = 0;
-    for (i = 1; i <= n; i++)
+    for (int i = 0; i < rows; i++)
     {
-        if (n % 2)
+        for (int j = 0; j < columns; j++)
         {
-            sum += i;
+            printf("%d\t", a[i][j]);
+        }
+        printf("\n");
+    }
+}
+int checkEqual(int a[][SIZE], int b[][SIZE], int columns, int rows)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            if (a[i][j] != b[i][j])
+                return 0;
         }
     }
-    printf("\t\t%d", sum);
+    return 1;
+}
+int main(void)
+{
+    int columns = 3;
+    int rows = 2;
+    int a[][SIZE] = {
+        {1, 2, 3},
+        {2, 3, 4}};
+    int b[][SIZE] = {
+        {1, 2, 3},
+        {2, 3, 4}};
+
+    printf("matrix one: \n");
+    printfArrayMatrix(a, columns, rows);
+    printf("matrix two: \n");
+    printfArrayMatrix(b, columns, rows);
+
+    if (checkEqual(a, b, columns, rows))
+        printf("equal!!!!!!!!!!!!");
+    else
+        printf("not equal!");
+
+    return 0;
 }
