@@ -1,16 +1,37 @@
 #include <stdio.h>
-int main()
+
+void swap(int *a, int *b)
 {
-    int i, n, sum;
-    printf("enter n : ");
-    scanf("%d", &n);
-    sum = 0;
-    for (i = 1; i <= n; i++)
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
+void sort(int a[], int size)
+{
+    for (int i = 0; i < size - 1; i++)
     {
-        if (n % 2)
-        {
-            sum += i;
-        }
+        for (int j = i + 1; j < size; j++)
+            if (a[i] > a[j])
+                swap(&a[i], &a[j]);
     }
-    printf("\t\t%d", sum);
+}
+
+void printArray(int a[], int size)
+{
+    for (int i = 0; i < size; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+}
+int main(void)
+{
+    int a[] = {10, -1, 2, 1, 9, 2, 6, 7, 3};
+    int size = sizeof(a) / sizeof(a[0]);
+    printf("After sort: ");
+    printArray(a, size);
+
+    sort(a, size);
+    printf("Before sort: ");
+    printArray(a, size);
+    return 0;
 }
