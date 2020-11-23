@@ -1,9 +1,9 @@
-// Write program to count frequency of each element in an array.
+// Write program to count total number of duplicate elements in an array.
 #include <stdio.h>
 #define SIZE 100
 
-int countNumberDuplicate(int[], int[], int[], int);
-void printArray(int[], int[], int);
+void countNumberDuplicate(int[], int[], int[], int);
+void printArray(int[], int[]);
 
 int main()
 {
@@ -12,11 +12,11 @@ int main()
     int c[SIZE] = {0};
     int size = sizeof(a) / sizeof(a[0]);
 
-    int sizeAffter = countNumberDuplicate(a, b, c, size);
-    printArray(b, c, sizeAffter);
+    countNumberDuplicate(a, b, c, size);
+    printArray(b, c);
 }
 
-int countNumberDuplicate(int a[], int b[], int c[], int size)
+void countNumberDuplicate(int a[], int b[], int c[], int size)
 {
     int sizeCount = -1;
 
@@ -39,13 +39,13 @@ int countNumberDuplicate(int a[], int b[], int c[], int size)
             c[sizeCount]++;
         }
     }
-    return ++sizeCount;
 }
 
-void printArray(int b[], int c[], int size)
+void printArray(int b[], int c[])
 {
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < SIZE; i++)
     {
-        printf("%d->%d lan\n", b[i], c[i]);
+        if (c[i] > 1)
+            printf("%d->%d lan\n", b[i], c[i]);
     }
 }

@@ -1,15 +1,37 @@
+//  Write functions to calculate the following expressions:
 #include <stdio.h>
 
-int ansA(int n)
+float ansA(int);
+int ansB(int);
+int ansC(int);
+int ansD(int);
+float ansE(int);
+
+int main(void)
+{
+    int n;
+    printf("enter n: ");
+    scanf("%d", &n);
+
+    printf("a. sum i/2 = %f\n", ansA(n));
+    printf("b. sum i/2 = %d\n", ansB(n));
+    printf("c. sum i/2 = %d\n", ansC(n));
+    printf("d. sum i/2 = %d\n", ansD(n));
+    printf("e. sum i/2 = %f\n", ansE(n));
+    return 0;
+}
+
+float ansA(int n)
 {
     float a = 0;
     for (int i = 1; i <= n; i++)
     {
-        a += i / 2;
+        a += (i / 2);
     }
 
     return a;
 }
+
 int ansB(int n)
 {
     float b = 0;
@@ -20,43 +42,37 @@ int ansB(int n)
 
     return b;
 }
+
 int ansC(int n)
 {
     float c = 0;
+    int gt = 1;
     for (int i = 1; i <= n; i++)
     {
-        int gt = 1;
-        for (int j = 1; j <= i; j++)
-            gt *= j;
-        c += gt + 1;
+        gt *= i;
+        c += (gt + 1);
     }
     return c;
 }
+
 int ansD(int n)
 {
-    float d = 0;
+    float d = 1;
+    int gt = 1;
     for (int i = 1; i <= n; i++)
     {
-        int gt = 1;
-        for (int j = 1; j <= i; j++)
-            gt *= j;
-        d += gt;
+        gt *= i;
+        d *= gt;
     }
     return d;
 }
-int ansE(int n)
+
+float ansE(int n)
 {
-    float e = 0;
+    float e = 1;
     for (int i = 1; i <= n; i++)
     {
-        e += (2 * i) / 3;
+        e *= ((2 * i) / 3);
     }
     return e;
-}
-int main()
-{
-    int n;
-    scanf("%d", &n);
-
-    printf("%d\n%d\n%d\n%d\n%d", ansA(n), ansB(n), ansC(n), ansD(n), ansE(n));
 }

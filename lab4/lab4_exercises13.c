@@ -1,4 +1,6 @@
+// Write program to put even and odd elements of array into two new separate arrays.
 #include <stdio.h>
+
 int main()
 {
     int i, n, sum;
