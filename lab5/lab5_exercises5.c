@@ -2,7 +2,7 @@
 #include <stdio.h>
 #define SIZE 100
 
-int getL(char str[])
+int len(char str[])
 {
     int cnt = 0;
     while (str[cnt] != '\0')
@@ -11,10 +11,11 @@ int getL(char str[])
     }
     return cnt - 1;
 }
+
 void concatenating(char s1[], char s2[])
 {
-    int leg1 = getL(s1);
-    int leg2 = getL(s2);
+    int leg1 = len(s1);
+    int leg2 = len(s2);
 
     for (int i = 0; i < leg1;i++)
     {
@@ -26,6 +27,7 @@ void concatenating(char s1[], char s2[])
         printf("%c", s2[i]);
     }
 }
+
 int main()
 {
     char s1[SIZE];

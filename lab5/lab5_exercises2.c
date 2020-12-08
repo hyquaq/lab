@@ -3,7 +3,7 @@
 #include <ctype.h>
 #define SIZE 100
 
-int getL(char str[])
+int len(char str[])
 {
     int cnt = 0;
     while (str[cnt] != '\0')
@@ -16,7 +16,7 @@ int getL(char str[])
 void reverseData(char str[], int leg)
 {
     printf("reverse: ");
-    for (int i = leg; i >= 0; i--)
+    for (int i = leg - 1; i >= 0; i--)
     {
         printf("%c", str[i]);
     }
@@ -25,7 +25,7 @@ void reverseData(char str[], int leg)
 int main()
 {
     char str[SIZE];
-    printf("enter: ");
+    printf("enter string: ");
     fgets(str, SIZE, stdin);
-    reverseData(str, getL(str) - 1);
+    reverseData(str, len(str));
 }

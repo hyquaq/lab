@@ -2,7 +2,7 @@
 #include <stdio.h>
 #define SIZE 100
 
-int getL(char str[])
+int len(char str[])
 {
     int cnt = 0;
     while (str[cnt] != '\0')
@@ -19,15 +19,16 @@ void deteleN(char s[], int n, int position)
         printf("%c", s[i]);
     }
 
-    for (int i = position + n; i < getL(s); i++)
+    for (int i = position + n; i < len(s); i++)
     {
         printf("%c", s[i]);
     }
 }
+
 int main()
 {
     char str[SIZE];
-    printf("enter: ");
+    printf("enter string: ");
     fgets(str, SIZE, stdin);
     int n, position;
     printf("enter n = ");

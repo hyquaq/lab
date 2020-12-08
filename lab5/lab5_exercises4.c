@@ -5,7 +5,7 @@
 #include <string.h>
 #define SIZE 100
 
-int getL(char str[])
+int len(char str[])
 {
     int cnt = 0;
     while (str[cnt] != '\0')
@@ -15,13 +15,14 @@ int getL(char str[])
     return cnt - 1;
 }
 
-void deOneChar(char str[], int location, int leg)
+void delOneChar(char str[], int location, int leg)
 {
     for (int i = location; i <= leg; i++)
     {
         str[i] = str[i + 1];
     }
 }
+
 void toLowerAll(char str[], int leg)
 {
     for (int i = 0; i < leg; i++)
@@ -52,11 +53,11 @@ void trimAllSpace(char str[], int leg)
 
     leg = last - first + 1;
     i = 0;
-    while (i < getL(str))
+    while (i < len(str))
     {
         while (str[i] == str[i + 1] && str[i] == ' ')
         {
-            deOneChar(str, i, getL(str));
+            delOneChar(str, i, len(str));
         }
 
         i++;
@@ -65,7 +66,7 @@ void trimAllSpace(char str[], int leg)
 
 void upperOne(char str[], int leg)
 {
-    for (int i = 0; i < leg; i++)
+    for (int i = 0; i <= leg; i++)
     {
         if(str[i-1] == ' ' || i == 0)
             str[i] = toupper(str[i]);
@@ -74,10 +75,12 @@ void upperOne(char str[], int leg)
 int main()
 {
     char str[SIZE];
-    printf("enter: ");
+    printf("enter string: ");
     fgets(str, SIZE, stdin);
-    toLowerAll(str, getL(str));
-    trimAllSpace(str, getL(str));
-    upperOne(str, getL(str));
+
+    toLowerAll(str, len(str));
+    trimAllSpace(str, len(str));
+    upperOne(str, len(str));
+    
     printf("%s", str);
 }

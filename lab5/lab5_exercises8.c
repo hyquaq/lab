@@ -2,7 +2,7 @@
 #include <stdio.h>
 #define SIZE 100
 
-int getL(char str[])
+int len(char str[])
 {
     int cnt = 0;
     while (str[cnt] != '\0')
@@ -14,7 +14,7 @@ int getL(char str[])
 
 void checkW(char str[], int leg, char word[])
 {
-    int legW = getL(word);
+    int legW = len(word);
     for (int i = 0; i < leg; i++)
     {
         if (str[i] == word[0])
@@ -45,5 +45,5 @@ int main()
     printf("enter word: ");
     fgets(word, SIZE, stdin);
 
-    checkW(str, getL(str), word);
+    checkW(str, len(str), word);
 }

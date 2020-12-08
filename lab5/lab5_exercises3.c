@@ -3,7 +3,7 @@
 #include <ctype.h>
 #define SIZE 100
 
-int getL(char str[])
+int len(char str[])
 {
     int cnt = 0;
     while (str[cnt] != '\0')
@@ -37,5 +37,5 @@ int main()
     char str[SIZE];
     printf("enter full name: ");
     fgets(str, SIZE, stdin);
-    split(str, getL(str) - 1);
+    split(str, len(str) - 1);
 }

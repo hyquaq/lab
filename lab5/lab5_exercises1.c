@@ -2,7 +2,7 @@
 #include <stdio.h>
 #define SIZE 100
 
-int getL(char str[])
+int len(char str[])
 {
     int cnt = 0;
     while (str[cnt] != '\0')
@@ -13,9 +13,9 @@ int getL(char str[])
 }
 
 int main()
-{
+{    
     char str[SIZE];
-    printf("enter: ");
+    printf("enter string: ");
     fgets(str, SIZE, stdin);
-    printf("=>Length = %d", getL(str));
+    printf("=>Length = %d", len(str));
 }
