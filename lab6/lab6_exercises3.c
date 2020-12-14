@@ -3,7 +3,7 @@
 
 int compute2(int n)
 {
-    if(n==1)
+    if (n == 1)
         return 2;
 
     return 2 * compute2(n - 1);

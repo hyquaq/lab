@@ -3,14 +3,14 @@
 
 int digitOfNum(int n)
 {
-    if(!n)
+    if (!n)
         return 0;
     return 1 + digitOfNum(n / 10);
 }
 int main(void)
 {
     int n;
-    printf("enter n= ");
+    printf("enter n = ");
     scanf("%d", &n);
     printf("%d", digitOfNum(n));
     return 0;

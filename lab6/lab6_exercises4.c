@@ -1,4 +1,4 @@
-// Define a recursive function to compute 2^n
+// Define a recursive function to compute x^n
 #include <stdio.h>
 
 int compute2(int x, int n)
@@ -10,12 +10,11 @@ int compute2(int x, int n)
 }
 int main(void)
 {
-    int n;
-    printf("enter n: ");
-    scanf("%d", &n);
-    int x;
+    int n, x;
     printf("enter x: ");
     scanf("%d", &x);
+    printf("enter n: ");
+    scanf("%d", &n);
     printf("%d^%d = %d", x, n, compute2(x, n));
     return 0;
 }

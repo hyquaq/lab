@@ -8,7 +8,7 @@ int factorialN(int n)
     return n * factorialN(n - 1);
 }
 
-int ansA(int n)
+float ansA(int n)
 {
     if (n == 1)
         return 3;
@@ -19,10 +19,10 @@ float ansB(int n)
 {
     if (n == 1)
         return 1.0 / 2;
-    return (1.0 / n) + ansB(n - 1);
+    return (n / 2.0) + ansB(n - 1);
 }
 
-int ansC(int n)
+float ansC(int n)
 {
     if (n == 1)
         return 1;
@@ -36,7 +36,7 @@ float ansD(int n)
     return sqrt(n * 1.0) + ansD(n - 1);
 }
 
-int ansE(int n)
+float ansE(int n)
 {
     if (n == 1)
         return 1;
@@ -48,10 +48,10 @@ int main(void)
     int n;
     printf("enter n = ");
     scanf("%d", &n);
-    printf("a. 2i+1 == %d\n", ansA(n));
+    printf("a. 2i+1 == %f\n", ansA(n));
     printf("a. i/2 == %f\n", ansB(n));
-    printf("a. i! == %d\n", ansC(n));
+    printf("a. i! == %f\n", ansC(n));
     printf("a. sqrt(i) == %f\n", ansD(n));
-    printf("a. *i! == %d\n", ansE(n));
+    printf("a. *i! == %f\n", ansE(n));
     return 0;
 }
