@@ -1,5 +1,5 @@
-nguyen -> 6
-tran -> 4
-quang -> 5
-huy -> 3
-kkk -> 3
+nguyen -> leng = 6
+tran -> leng = 4
+quang -> leng = 5
+huy -> leng = 3
+kkk -> leng = 3

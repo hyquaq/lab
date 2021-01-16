@@ -1,4 +1,4 @@
-// read the input data contains 5 strins, then write to new file the length of each string
+// read the input data contains 5 strings, then write to new file the length of each string
 #include <stdio.h>
 #include <string.h>
 
@@ -10,7 +10,7 @@ int main()
     for (int i = 0; i < 5; i++)
     {
         fscanf(fi, "%s", &str);
-        fprintf(fo, "%s -> %d\n", str, strlen(str));
+        fprintf(fo, "%s -> leng = %d\n", str, strlen(str));
     }
     fclose(fi);
     fclose(fo);

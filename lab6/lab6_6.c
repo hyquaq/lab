@@ -49,9 +49,9 @@ int main(void)
     printf("enter n = ");
     scanf("%d", &n);
     printf("a. 2i+1 == %f\n", ansA(n));
-    printf("a. i/2 == %f\n", ansB(n));
-    printf("a. i! == %f\n", ansC(n));
-    printf("a. sqrt(i) == %f\n", ansD(n));
-    printf("a. *i! == %f\n", ansE(n));
+    printf("b. i/2 == %f\n", ansB(n));
+    printf("c. i! == %f\n", ansC(n));
+    printf("d. sqrt(i) == %f\n", ansD(n));
+    printf("e. *i! == %f\n", ansE(n));
     return 0;
 }
